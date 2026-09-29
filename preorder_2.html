@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-order Vape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page preorder-page">
+        <a class="back-link" href="week3_experiment_2.html">&larr; Back to product</a>
+
+        <section class="order-panel" aria-labelledby="order-title">
+            <p class="eyebrow">RESERVE YOURS</p>
+            <h2 id="order-title">Pre-order now</h2>
+            <p class="price">$25.99</p>
+
+            <form id="order-form">
+                <button type="submit">Reserve my pre-order</button>
+            </form>
+
+            <p class="confirmation" id="confirmation" role="status">
+                Thanks. Your pre-order request has been received.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const orderForm = document.querySelector('#order-form');
+        const confirmation = document.querySelector('#confirmation');
+
+        orderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            confirmation.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
