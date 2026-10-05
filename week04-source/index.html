@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Personal Computer Market — music, editions, and objects from PC Music.">
+  <title>PC MUSIC — Personal Computer Market</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23002fff'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='21' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=grid-1">
+  <script src="app.js?v=grid-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inventory">Skip to products</a>
+  <header class="navigation page-width">
+    <nav aria-label="Main navigation">
+      <a href="#new">NEW</a>
+      <a href="#inventory">INVENTORY</a>
+      <button class="nav-link unavailable" disabled aria-label="Museum — coming soon">MUSEUM</button>
+      <button class="button cart-toggle" data-open-cart>CART <span data-cart-count hidden>0</span></button>
+    </nav>
+  </header>
+  <div class="hero-title" id="hero-title">
+    <h1><img src="assets/pc-music.svg" alt="PC MUSIC" width="1277" height="451" fetchpriority="high"></h1>
+    <p>(MARKET)</p>
+  </div>
+  <div class="hero-space" aria-hidden="true"></div>
+  <main id="inventory" class="inventory page-width" aria-label="Products">
+    <article class="product" id="new" data-product="dux" aria-labelledby="dux-title">
+      <figure class="product-image"><img src="assets/dux-lifestyle.png" alt="Dux Content Lifestyle artwork with two illustrated figures" width="2276" height="1182" fetchpriority="high"></figure>
+      <div class="product-copy">
+        <h2 id="dux-title">Dux Content - Lifestyle Vinyl</h2>
+        <p>PCMDUX1: Dux Content - Lifestyle Vinyl<br>The ultimate masterclass in audience entertainment. First released in 2012, with a digital re-release in 2013, this version of Lifestyle includes the 2011 bonus tracks “Business Class” and “Rouge”. Strategically optimised for scarcity.</p>
+        <div class="purchase"><button class="button" data-add="dux">ADD TO CART</button><span class="price">$26.00</span></div>
+      </div>
+    </article>
+    <article class="product" data-product="ag" aria-labelledby="ag-title">
+      <figure class="product-image product-image-ag"><img src="assets/ag-cook-7g.png" alt="Iridescent green beetle artwork for A.G. Cook's 7G prints" width="2192" height="1242" loading="lazy"></figure>
+      <div class="product-copy">
+        <h2 id="ag-title">A.G. Cook - 7G Artwork Prints</h2>
+        <p>A. G. Cook - 7G Artwork Prints<br>All 7 discs and cover artworks by Simon Whybray, giclée-printed on heavyweight, textured cotton paper. Edition of 10 per artwork.</p>
+        <div class="purchase"><button class="button" data-add="ag">ADD TO CART</button><span class="price">$32.00</span></div>
+      </div>
+    </article>
+    <article class="product" data-product="grrl" aria-labelledby="grrl-title">
+      <figure class="product-image"><img src="assets/grrl-beetle.png" alt="Silver sculptural folds from the GRRL Beetle CD artwork" width="1568" height="1566" loading="lazy"></figure>
+      <div class="product-copy">
+        <h2 id="grrl-title">GRRL - Beetle CD</h2>
+        <p>PCMGRRL1CD: GRRL - Beetle CD<br>Very rare Beetle CD. GRRL’s quattuorvigintuple single – packaged in a super jewel case, featuring the bioluminescent Beetle silhouette on silver disc.</p>
+        <div class="purchase"><button class="button" data-add="grrl">ADD TO CART</button><span class="price">$14.00</span></div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="footer-inner page-width"><p>PERSONAL COMPUTER MARKET</p><button class="button" data-newsletter>JOIN THE NEWSLETTER</button></div>
+  </footer>
+  <dialog id="cart-dialog" aria-labelledby="cart-heading">
+    <div class="dialog-heading"><h2 id="cart-heading">YOUR CART</h2><button class="close-button" data-close aria-label="Close cart">×</button></div>
+    <div id="cart-items"></div>
+    <div class="cart-total"><span>SUBTOTAL</span><strong id="cart-subtotal">$0.00</strong></div>
+    <p class="service-note">This storefront is in preview. Checkout will be available when a payment provider is connected.</p>
+    <button class="button" data-close>CONTINUE BROWSING</button>
+  </dialog>
+  <dialog id="newsletter-dialog" aria-labelledby="newsletter-heading">
+    <div class="dialog-heading"><h2 id="newsletter-heading">NEWSLETTER</h2><button class="close-button" data-close aria-label="Close newsletter">×</button></div>
+    <p>Newsletter sign-up will be available when the mailing service is connected.</p>
+    <button class="button" data-close>BACK TO MARKET</button>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
