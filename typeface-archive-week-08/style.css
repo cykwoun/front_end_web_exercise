@@ -1,0 +1,196 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.archive {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+header {
+  padding: 24px 32px 0;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.logo {
+  position: absolute;
+  right: 32px;
+  top: 18px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #b5b5b5;
+}
+
+.sub {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+
+/* Typeface Specimen */
+
+.specimen {
+  flex: 1;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#sample {
+  font-size: clamp(200px, 34vw, 540px);
+  line-height: .9;
+  letter-spacing: -.065em;
+  color: #000;
+  white-space: nowrap;
+  font-weight: 900;
+}
+
+/* Controls */
+
+.controls {
+  padding: 20px 32px 32px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 11px;
+  margin-bottom: 18px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.choice {
+  background: #eee;
+  color: #111;
+  border: 0;
+  padding: 18px 5px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.choice.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.footer h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+#next {
+  background: #000;
+  color: #fff;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid #777;
+  outline-offset: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  header {
+    padding: 18px 16px 0;
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .logo {
+    right: 16px;
+    top: 15px;
+    font-size: 22px;
+  }
+
+  .sub {
+    font-size: 9px;
+  }
+
+  .specimen {
+    min-height: 280px;
+  }
+
+  #sample {
+    font-size: 55vw;
+  }
+
+  .controls {
+    padding: 16px;
+  }
+
+  .choices {
+    gap: 3px;
+  }
+
+  .choice {
+    font-size: 9px;
+    padding: 13px 2px;
+  }
+
+  .footer h1 {
+    font-size: 20px;
+  }
+
+  #next {
+    padding: 14px;
+    font-size: 11px;
+  }
+}
