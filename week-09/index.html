@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Make a short packing list for the weather at your destination."
+  >
+  <title>Packing Helper</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Packing Helper</h1>
+      <p>Enter your trip details. Get a list that fits the forecast.</p>
+    </header>
+
+    <form id="trip-form">
+      <label for="destination">Destination</label>
+      <input
+        id="destination"
+        type="text"
+        placeholder="Where are you going?"
+        maxlength="45"
+        required
+      >
+
+      <div class="two-col">
+        <div>
+          <label for="temperature">Temperature (°C)</label>
+          <input
+            id="temperature"
+            type="number"
+            min="-50"
+            max="60"
+            placeholder="e.g. 12"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="weather">Weather</label>
+          <select id="weather">
+            <option value="dry">Dry / clear</option>
+            <option value="rain">Rainy</option>
+            <option value="snow">Snowy</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit">Make packing list</button>
+    </form>
+
+    <section class="results" aria-labelledby="result-title">
+      <div class="result-head">
+        <h2 id="result-title">Your list</h2>
+        <span id="progress" aria-live="polite">0 of 0 packed</span>
+      </div>
+
+      <p id="feedback" role="status" aria-live="polite">
+        Your packing list will appear here.
+      </p>
+
+      <ul id="items"></ul>
+    </section>
+  </main>
+</body>
+</html>
