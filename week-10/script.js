@@ -84,7 +84,6 @@ form.addEventListener('submit', async event => {
   updateProgress();
 
   try {
-    // First request: translate a city name into coordinates.
     const locationURL = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(destination)}&count=1&language=en&format=json`;
     const locationData = await fetchJSON(locationURL);
     if (!locationData.results?.length) {
@@ -93,7 +92,6 @@ form.addEventListener('submit', async event => {
     }
 
     const place = locationData.results[0];
-    // Second request: get current weather at those coordinates.
     const weatherURL = `https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m,weather_code&timezone=auto`;
     const weatherData = await fetchJSON(weatherURL);
     const current = weatherData.current;
