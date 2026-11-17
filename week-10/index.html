@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Make a packing list using live weather at your destination.">
+  <title>Packing Helper</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Packing Helper</h1>
+      <p>Enter your destination. Get a packing list based on current weather.</p>
+    </header>
+
+    <form id="trip-form">
+      <label for="destination">Destination</label>
+      <input id="destination" type="text" placeholder="e.g. New York, Seoul, London" maxlength="80" autocomplete="off" required>
+      <button id="submit-button" type="submit">Check weather & make list</button>
+    </form>
+
+    <section class="results" aria-labelledby="result-title">
+      <div class="result-head">
+        <h2 id="result-title">Your list</h2>
+        <span id="progress" aria-live="polite">0 of 0 packed</span>
+      </div>
+      <p id="feedback" role="status" aria-live="polite">Your packing list will appear here.</p>
+      <div id="weather-summary" class="weather-summary" hidden></div>
+      <ul id="items"></ul>
+    </section>
+    <footer>Weather and location data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Current conditions, not a trip-date forecast.</footer>
+  </main>
+</body>
+</html>
